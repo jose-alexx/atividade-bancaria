@@ -1,17 +1,17 @@
 public class Conta {
     private int numero;
-    public String titular_da_conta;
-    public double saldo_da_conta;
+    public String titular;
+    public double saldo;
 
-    public Conta(int numero, String titular_da_conta, double saldo_da_conta){
+    public Conta(int numero, String titular, double saldo){
         this.numero = numero;
-        this.titular_da_conta = titular_da_conta;
-        this.saldo_da_conta = saldo_da_conta;
+        this.titular = titular;
+        this.saldo = saldo;
     }
 
     public void depositar(double valor_deposito) {
         if (valor_deposito > 0) {
-            saldo_da_conta = saldo_da_conta += valor_deposito;
+            saldo = saldo += valor_deposito;
         } else {
             System.out.println("O seu deposito não foi finalizado!");
         }
@@ -19,13 +19,13 @@ public class Conta {
 
     public void sacar(double valor_deposito) {
         if (valor_deposito > 0) {
-            saldo_da_conta = saldo_da_conta -= valor_deposito;
+            saldo = saldo -= valor_deposito;
         } else {
             System.out.println("O seu saque não foi finalizado!");
         }
     }
 
-    public void extrato() {
-        System.out.println("O seu saldo é: " + saldo_da_conta);
+    public void verificar_saldo() {
+        System.out.println("O seu saldo é: " + saldo);
     }
 }

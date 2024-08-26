@@ -8,11 +8,11 @@ public class Main {
         System.out.println("Digite o valor do deposito: ");
         double valor_deosito = entrada.nextDouble();
         conta1.depositar(valor_deosito);
-        conta1.extrato();
+        conta1.verificar_saldo();
 
         System.out.println("Digite o valor do saque: ");
         double valor_saque = entrada.nextDouble();
         conta1.sacar(valor_saque);
-        conta1.extrato();
+        conta1.verificar_saldo();
     }
 }
